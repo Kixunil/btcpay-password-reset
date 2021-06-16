@@ -11,6 +11,15 @@ The reason this is not in C# is I needed it quickly and couldn't afford to wait 
 Feel free to translate it to C# or whatever is more suitable for inclusion in BTCPayServer.
 The code is based on [the excellent article explaining how passwords are encoded by ASP.NET](https://www.blinkingcaret.com/2017/11/29/asp-net-identity-passwordhash/)
 
+## Building
+
+0. install Rust (`apt install cargo` on Debian, see https://rustup.rs for other platforms)
+1. Run `cargo build` in the repository top-level directory
+2. You will find the binary in `./target/debug/btcpay-password-reset`
+
+If you're packging this tool, please use `cargo build --release` to create a smaller package.
+You will find the release binary in `./target/release/btcpay-password-reset`
+
 ## Usage
 
 `btcpay-password-reset email@domain [/path/to/btcpay_config/file]`
